@@ -3,7 +3,7 @@ A random maze generator. Based on the Recursive Backtracker algorithm.
 
 1. The maze begins as a grid of cells, with an empty stack.
 2. Choose a random initial cell from the grid:
-   1. Set this as the current cell and marked it as visited.
+   1. Set this as the current cell and mark it as visited.
 3. While there are unvisited cells in the grid:
    1. If the current cell has any unvisited neighbour cells:
       1. Choose a random unvisited neighbour cell.

@@ -4,22 +4,21 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Windows.Threading;
 
 namespace MazeGenerator.Model
 {
     /// <summary>
     /// The Maze class represents a computer-generated maze.
+    /// The maze is generated using the Recursive Backtracker algorithm.
     /// </summary>
     public class Maze : NotificationBase
     {
         #region Fields
         
-        private ObservableCollection<MazeCell> _mazeCells;
-        private Stack<MazeCell> _mazeGeneratorStack;
-        private MazeState _simulationState = MazeState.Default;
-        private Random _randomNumberGenerator;
-        private static object _updateLock = new object();
+        private ObservableCollection<MazeCell> _mazeCells;  // The maze.
+        private Stack<MazeCell> _mazeGeneratorStack;        // A stack used to generate a new maze.
+        private MazeState _mazeState = MazeState.Default;   // The current state of the maze.
+        private Random _randomNumberGenerator;              // A random number generator.
 
         #endregion
 
@@ -96,17 +95,17 @@ namespace MazeGenerator.Model
         }
         
         /// <summary>
-        /// Gets or sets the simulation running boolean flag.
+        /// Gets or sets the maze state.
         /// </summary>
         public MazeState MazeState
         {
             get
             {
-                return _simulationState;
+                return _mazeState;
             }
             private set
             {
-                _simulationState = value;
+                _mazeState = value;
                 RaisePropertyChanged("MazeState");
                 RaisePropertyChanged("CanGenerateMaze");
                 RaisePropertyChanged("CanResetMaze");

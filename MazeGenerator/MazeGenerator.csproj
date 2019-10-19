@@ -57,10 +57,12 @@
     <Compile Include="Common\DelegateCommand.cs" />
     <Compile Include="Common\NotificationBase.cs" />
     <Compile Include="ViewModel\MazeGeneratorViewModel.cs" />
-    <Compile Include="View\MazeGeneratorView.xaml.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\MazeGeneratorView.xaml.cs">
+      <DependentUpon>MazeGeneratorView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

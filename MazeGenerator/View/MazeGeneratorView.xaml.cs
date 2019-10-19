@@ -13,6 +13,9 @@ namespace MazeGenerator.View
 
         #region Constructors
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
         public MazeGeneratorView()
         {
             InitializeComponent();

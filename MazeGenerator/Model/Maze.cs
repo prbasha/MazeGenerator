@@ -320,7 +320,14 @@ namespace MazeGenerator.Model
             {
                 // Select a random cell to start.
                 int cellIndex = _randomNumberGenerator.Next(Constants.MazeHeight * Constants.MazeWidth);
-                return MazeCells.ElementAt(cellIndex);
+                if (IsCellIndexValid(cellIndex))
+                {
+                    return MazeCells.ElementAt(cellIndex);
+                }
+                else
+                {
+                    throw new Exception("Unable to choose a randmom cell.");
+                }
             }
             catch (Exception ex)
             {

@@ -9,7 +9,7 @@ A random maze generator. Based on the Recursive Backtracker algorithm.
       1. Choose a random unvisited neighbour cell.
       2. Remove the wall between the current cell and the chosen neighbour cell.
       3. Push the current cell onto the stack.
-      4. Set the chosen neighbour cell as the current cell.
+      4. Set the chosen neighbour cell as the current cell and mark it as visited.
       5. Repeat step 3, with the new current cell.
    2. Else the current cell has no unvisited neighbour cells:
       1. Pop a cell from the stack, and set it as the current cell.

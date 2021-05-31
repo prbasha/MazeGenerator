@@ -48,7 +48,7 @@ namespace MazeGenerator.Model
             private set
             {
                 _northWall = value;
-                RaisePropertyChanged("NorthWall");
+                RaisePropertyChanged();
             }
         }
 
@@ -64,7 +64,7 @@ namespace MazeGenerator.Model
             private set
             {
                 _eastWall = value;
-                RaisePropertyChanged("EastWall");
+                RaisePropertyChanged();
             }
         }
 
@@ -80,7 +80,7 @@ namespace MazeGenerator.Model
             private set
             {
                 _southWall = value;
-                RaisePropertyChanged("SouthWall");
+                RaisePropertyChanged();
             }
         }
 
@@ -96,7 +96,7 @@ namespace MazeGenerator.Model
             private set
             {
                 _leftWall = value;
-                RaisePropertyChanged("WestWall");
+                RaisePropertyChanged();
             }
         }
 
@@ -112,7 +112,7 @@ namespace MazeGenerator.Model
             set
             {
                 _cellState = value;
-                RaisePropertyChanged("CellState");
+                RaisePropertyChanged();
             }
         }
 
@@ -128,7 +128,7 @@ namespace MazeGenerator.Model
             set
             {
                 _cellType = value;
-                RaisePropertyChanged("CellType");
+                RaisePropertyChanged();
             }
         }
         
@@ -144,7 +144,7 @@ namespace MazeGenerator.Model
             set
             {
                 _containsRobot = value;
-                RaisePropertyChanged("ContainsRobot");
+                RaisePropertyChanged();
             }
         }
 

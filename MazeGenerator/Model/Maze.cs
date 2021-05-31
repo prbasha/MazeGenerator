@@ -90,7 +90,7 @@ namespace MazeGenerator.Model
             private set
             {
                 _mazeCells = value;
-                RaisePropertyChanged("MazeCells");
+                RaisePropertyChanged();
             }
         }
         
@@ -106,7 +106,7 @@ namespace MazeGenerator.Model
             private set
             {
                 _mazeState = value;
-                RaisePropertyChanged("MazeState");
+                RaisePropertyChanged();
                 RaisePropertyChanged("CanGenerateMaze");
                 RaisePropertyChanged("CanResetMaze");
             }
